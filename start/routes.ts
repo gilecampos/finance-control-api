@@ -17,4 +17,4 @@ router.get('/', async () => {
 })
 
 
-router.post('/v1/users/register', [UsersController, 'store'])
+router.post('/v1/users/register', [UsersController, 'create'])
