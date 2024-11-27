@@ -18,3 +18,4 @@ router.get('/', async () => {
 
 
 router.post('/v1/users/register', [UsersController, 'create'])
+router.post('/v1/users/login', [UsersController, 'store'])
