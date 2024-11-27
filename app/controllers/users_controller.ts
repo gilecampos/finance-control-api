@@ -9,10 +9,10 @@ export default class UsersController {
     try {
       const user = await User.create(credentials)
       if(user.id) {
-        return response.status(201).send({ status: 201, message: "Created user" })
+        return response.status(201).send({ status: 201, message: "Usuário criado com sucesso" })
       }
     } catch (error) {
-      console.log(error)
+      return response.status(400).send({ status: 400, message: error })
     }
   }
 }
