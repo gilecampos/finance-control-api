@@ -17,5 +17,8 @@ router.get('/', async () => {
 })
 
 
-router.post('/v1/users/register', [UsersController, 'create'])
-router.post('/v1/users/login', [UsersController, 'store'])
+router.group(() => {
+  router.post('users/register', [UsersController, 'create'])
+  router.post('users/login', [UsersController, 'store'])
+}).prefix('api/v1')
+
